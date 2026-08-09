@@ -1,23 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de contato</title>
+    <title>SoundSphere - Fale Conosco</title>
+    <link rel="stylesheet" href="exercicios.css">
 </head>
 <body>
+
     <header>
         <nav>
-            <a href="index.html">Início</a> |
-            <a href="about.html">Quem somos</a> |
-            <a href="contact.html">Fale conosco</a>
+            <a href="index.html" class="logo">Sound<span>Sphere</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html">Quem Somos</a></li>
+                <li><a href="contact.html" class="active">Fale Conosco</a></li>
+            </ul>
         </nav>
     </header>
-    <h1>Fale conosco</h1>
+
+    <main>
+        <section class="hero">
+            <h1>Entre em Contato</h1>
+            <p>Dúvidas, sugestões de novos sons ou parcerias? Envie uma mensagem!</p>
+        </section>
+
+        <section class="grid" style="grid-template-columns: 1fr 1fr;">
+            <!-- Formulário -->
+            <form class="card" action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione uma opção...</option>
+                        <option value="sugestao">Sugestão de Som</option>
+                        <option value="suporte">Suporte Técnico</option>
+                        <option value="parceria">Parceria/Envio de Música</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+
+            <!-- FAQ Sanfona (Accordion em CSS/HTML Puro) -->
+            <div>
+                <h3 style="margin-bottom: 1.5rem;">Perguntas Frequentes</h3>
+                
+                <details>
+                    <summary>O serviço é totalmente gratuito?</summary>
+                    <p>Sim! Todos os ambientes sonoros disponíveis na página inicial podem ser ouvidos gratuitamente.</p>
+                </details>
+
+                <details>
+                    <summary>Sou produtor de áudio, posso enviar minha faixa?</summary>
+                    <p>Com certeza! Selecione a opção "Parceria/Envio de Música" no formulário e envie o link do seu portfólio.</p>
+                </details>
+
+                <details>
+                    <summary>Preciso de internet para ouvir?</summary>
+                    <p>Como o projeto roda direto no navegador, você precisará de conexão para carregar os áudios.</p>
+                </details>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        ComoDevSer News <br>
-        &copy; Todod os direitos reservados
+        <p>&copy; 2026 SoundSphere. Todos os direitos reservados.</p>
     </footer>
+
 </body>
 </html>

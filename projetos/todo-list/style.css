@@ -1,107 +1,80 @@
-* {
-    padding: 0;
+:root {
+    --azul: #315efb;
+    --azul-escuro: #2448c6;
+    --texto: #172033;
+    --texto-suave: #687185;
+    --borda: #e7eaf0;
+    --fundo: #f6f8fc;
+    --branco: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
     margin: 0;
-    box-sizing: border-box;
-    color: rgb(50, 50, 50);
+    min-height: 100vh;
+    color: var(--texto);
+    background: var(--fundo);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-button {
-    cursor: pointer;
-    border-radius: 2px;
-    border: none;
-}
-
-header {
+.topo {
+    min-height: 76px;
+    padding: 0 6vw;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px rgb(245, 225, 225);
-    padding: 6px 6px;
+    gap: 36px;
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
 }
 
-header .menu a {
-    text-decoration: none;
-    padding: 4px 8px;
-}
+.marca { color: var(--texto); font-size: 1.25rem; font-weight: 800; letter-spacing: -.5px; text-decoration: none; }
+.marca span { color: var(--azul); }
+nav { display: flex; gap: 8px; margin-right: auto; }
+nav a { color: var(--texto-suave); padding: 9px 12px; border-radius: 7px; font-size: .9rem; text-decoration: none; }
+nav a:hover, nav .ativo { color: var(--azul); background: #edf1ff; font-weight: 700; }
 
-header .menu a:hover {
-    background-color: rgb(71, 71, 255);
-    color: white;
-    width: 800px;
-}
+.perfil { display: flex; align-items: center; gap: 10px; }
+.avatar { display: grid; place-items: center; width: 36px; height: 36px; color: var(--azul-escuro); background: #dfe7ff; border-radius: 50%; font-size: .75rem; font-weight: 800; }
+.nome-usuario, .email { margin: 0; }
+.nome-usuario { font-size: .82rem; font-weight: 700; }
+.email { margin-top: 3px; color: var(--texto-suave); font-size: .7rem; }
 
-.profile .email {
-    font-size: 10px;
-}
+.conteudo { width: min(100% - 32px, 720px); margin: 68px auto; }
+.apresentacao { margin-bottom: 26px; }
+.eyebrow { margin: 0 0 8px; color: var(--azul); font-size: .7rem; font-weight: 800; letter-spacing: 1.2px; }
+h1 { margin: 0; font-size: clamp(2rem, 5vw, 2.75rem); letter-spacing: -1.5px; }
+.apresentacao > p:last-child { color: var(--texto-suave); margin: 10px 0 0; }
 
-main {
-    width: 300px;
-    margin: 20px auto 0 auto;
-}
+.painel { overflow: hidden; background: var(--branco); border: 1px solid var(--borda); border-radius: 14px; box-shadow: 0 12px 30px rgb(37 52 86 / 7%); }
+.nova-tarefa { display: flex; gap: 10px; padding: 20px; border-bottom: 1px solid var(--borda); }
+.nova-tarefa input { min-width: 0; flex: 1; padding: 12px 14px; color: var(--texto); background: #f9fafc; border: 1px solid var(--borda); border-radius: 8px; font: inherit; }
+.nova-tarefa input:focus { outline: 3px solid #dbe4ff; border-color: var(--azul); }
+button { border: 0; cursor: pointer; font: inherit; }
+.nova-tarefa button { padding: 0 16px; color: white; background: var(--azul); border-radius: 8px; font-size: .88rem; font-weight: 700; }
+.nova-tarefa button:hover { background: var(--azul-escuro); }
+.nova-tarefa button span { margin-left: 5px; font-size: 1.1rem; }
 
-main h2 {
-    text-align: center;
-    margin: 0px 0 20px 0;
-}
+.resumo { display: flex; justify-content: space-between; align-items: center; padding: 22px 20px 10px; }
+.resumo h2 { margin: 0; font-size: 1rem; }
+.resumo span { color: var(--texto-suave); font-size: .8rem; }
+.lista-tarefas { margin: 0; padding: 0 12px 12px; list-style: none; }
+.item-tarefa { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 8px; border-bottom: 1px solid #f0f1f4; }
+.item-tarefa:last-child { border-bottom: 0; }
+.item-tarefa label { display: flex; align-items: center; gap: 11px; cursor: pointer; font-size: .94rem; }
+.item-tarefa input { position: absolute; opacity: 0; }
+.caixa-check { width: 19px; height: 19px; display: inline-grid; place-items: center; border: 1.5px solid #b7bfce; border-radius: 6px; }
+.item-tarefa input:checked + .caixa-check { background: var(--azul); border-color: var(--azul); }
+.item-tarefa input:checked + .caixa-check::after { content: "✓"; color: white; font-size: .75rem; font-weight: 800; }
+.concluida label > span:last-child { color: #98a0ae; text-decoration: line-through; }
+.remover { width: 28px; height: 28px; color: #a3aab7; background: transparent; border-radius: 6px; font-size: 1.25rem; line-height: 1; }
+.remover:hover { color: #d14545; background: #fff0f0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 
-main form {
-    width: 250px;
-    margin: 0 auto;
-}
-
-main form .task {
-    display: flex;
-    justify-content: space-between;
-}
-
-main form .task button {
-    padding: 4px 8px;
-    background-color: rgb(59, 155, 240);
-    color: white;
-}
-
-main form .task button:hover {
-    background-color: rgb(24, 94, 192);
-}
-
-main form .task input {
-    border: none;
-    background-color: rgb(241, 241, 241);
-    border-radius: 2px;
-    padding: 0 5px;
-}
-
-main form .task input:focus {
-    border: none;
-    outline: none;
-}
-
-main .tasks {
-    width: 250px;
-    margin: 10px auto 0 auto;
-}
-
-main .tasks .task-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 3px 0;
-    padding: 3px 3px;
-    border-radius: 2px;
-}
-
-main .tasks .task-item:hover {
-    background-color: rgb(247, 247, 247);
-}
-
-main .tasks .task-item .actions .check {
-    background-color: rgb(182, 235, 125);
-}
-
-main .tasks .task-item .actions .delete {
-    background-color: rgb(235, 125, 125);
-}
-
-main .tasks .task-item .content p {
-    font-size: 12px;
+@media (max-width: 620px) {
+    .topo { padding: 14px 20px; gap: 12px; flex-wrap: wrap; }
+    nav { order: 3; width: 100%; }
+    .perfil { margin-left: auto; }
+    .email { display: none; }
+    .conteudo { margin: 42px auto; }
 }

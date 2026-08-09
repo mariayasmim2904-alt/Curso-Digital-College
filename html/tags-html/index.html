@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia rápido das principais tags HTML">
+    <link rel="stylesheet" href="style.css">
+    <title>Guia de tags HTML</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="marca">HTML <span>Guia</span></div>
+        <nav aria-label="Navegação do guia">
+            <a href="#estrutura">Estrutura</a>
+            <a href="#texto">Texto</a>
+            <a href="#links">Links</a>
+            <a href="#formularios">Formulários</a>
+            <a href="#tabelas">Tabelas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="etiqueta">MATERIAL DE APOIO</p>
+            <h1>Principais tags HTML em um só lugar.</h1>
+            <p>Consulte o significado, a melhor situação para uso e um exemplo simples de cada elemento.</p>
+        </section>
+
+        <section id="estrutura" class="secao" aria-labelledby="titulo-estrutura">
+            <div class="titulo-secao"><p>01</p><h2 id="titulo-estrutura">Estrutura e semântica</h2></div>
+            <div class="grade-tags">
+                <article class="tag"><code>&lt;html&gt;</code><h3>Documento HTML</h3><p>É o elemento raiz: envolve todo o conteúdo da página.</p><pre><code>&lt;html lang="pt-BR"&gt;...&lt;/html&gt;</code></pre></article>
+                <article class="tag"><code>&lt;head&gt;</code><h3>Metadados</h3><p>Guarda informações da página, como título, codificação e links para CSS.</p><pre><code>&lt;title&gt;Minha página&lt;/title&gt;</code></pre></article>
+                <article class="tag"><code>&lt;body&gt;</code><h3>Conteúdo visível</h3><p>Contém tudo o que aparece para quem visita o site.</p><pre><code>&lt;body&gt;Conteúdo&lt;/body&gt;</code></pre></article>
+                <article class="tag"><code>&lt;header&gt;</code><h3>Cabeçalho</h3><p>Área introdutória da página ou de uma seção; pode ter logo e menu.</p><pre><code>&lt;header&gt;Meu site&lt;/header&gt;</code></pre></article>
+                <article class="tag"><code>&lt;nav&gt;</code><h3>Navegação</h3><p>Agrupa links de navegação importantes.</p><pre><code>&lt;nav&gt;&lt;a href="#"&gt;Início&lt;/a&gt;&lt;/nav&gt;</code></pre></article>
+                <article class="tag"><code>&lt;main&gt;</code><h3>Conteúdo principal</h3><p>Representa o conteúdo único da página. Use apenas um por página.</p><pre><code>&lt;main&gt;...&lt;/main&gt;</code></pre></article>
+                <article class="tag"><code>&lt;section&gt;</code><h3>Seção temática</h3><p>Divide conteúdos por assunto; normalmente deve ter um título.</p><pre><code>&lt;section&gt;&lt;h2&gt;Sobre&lt;/h2&gt;&lt;/section&gt;</code></pre></article>
+                <article class="tag"><code>&lt;article&gt;</code><h3>Conteúdo independente</h3><p>Use para um conteúdo que faz sentido sozinho, como um post ou notícia.</p><pre><code>&lt;article&gt;Post do blog&lt;/article&gt;</code></pre></article>
+                <article class="tag"><code>&lt;aside&gt;</code><h3>Conteúdo complementar</h3><p>Inclui informações relacionadas, porém não essenciais, como uma barra lateral.</p><pre><code>&lt;aside&gt;Links úteis&lt;/aside&gt;</code></pre></article>
+                <article class="tag"><code>&lt;footer&gt;</code><h3>Rodapé</h3><p>Área final da página ou seção, com contatos e direitos autorais.</p><pre><code>&lt;footer&gt;© 2026&lt;/footer&gt;</code></pre></article>
+                <article class="tag"><code>&lt;div&gt;</code><h3>Agrupamento genérico</h3><p>Organiza elementos para estilo ou layout quando não há uma tag semântica adequada.</p><pre><code>&lt;div class="card"&gt;...&lt;/div&gt;</code></pre></article>
+            </div>
+        </section>
+
+        <section id="texto" class="secao" aria-labelledby="titulo-texto">
+            <div class="titulo-secao"><p>02</p><h2 id="titulo-texto">Texto e conteúdo</h2></div>
+            <div class="grade-tags">
+                <article class="tag"><code>&lt;h1&gt; a &lt;h6&gt;</code><h3>Títulos</h3><p>Definem a hierarquia dos títulos. Use um único <code>&lt;h1&gt;</code> como título principal.</p><pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;</code></pre></article>
+                <article class="tag"><code>&lt;p&gt;</code><h3>Parágrafo</h3><p>Representa um bloco de texto comum.</p><pre><code>&lt;p&gt;Um parágrafo.&lt;/p&gt;</code></pre></article>
+                <article class="tag"><code>&lt;strong&gt;</code><h3>Importância</h3><p>Dá forte importância ao texto; geralmente aparece em negrito.</p><pre><code>&lt;strong&gt;Atenção!&lt;/strong&gt;</code></pre></article>
+                <article class="tag"><code>&lt;em&gt;</code><h3>Ênfase</h3><p>Destaca uma palavra com ênfase; geralmente aparece em itálico.</p><pre><code>&lt;em&gt;muito&lt;/em&gt;</code></pre></article>
+                <article class="tag"><code>&lt;mark&gt;</code><h3>Marcação</h3><p>Realça um trecho relevante, parecido com um marca-texto.</p><pre><code>&lt;mark&gt;destaque&lt;/mark&gt;</code></pre></article>
+                <article class="tag"><code>&lt;small&gt;</code><h3>Texto secundário</h3><p>Exibe observações, direitos autorais ou texto menos importante.</p><pre><code>&lt;small&gt;Termos válidos.&lt;/small&gt;</code></pre></article>
+                <article class="tag"><code>&lt;br&gt;</code><h3>Quebra de linha</h3><p>Quebra uma linha de texto. Use quando a quebra tiver significado.</p><pre><code>Rua A&lt;br&gt;Fortaleza - CE</code></pre></article>
+                <article class="tag"><code>&lt;hr&gt;</code><h3>Separação temática</h3><p>Cria uma divisão entre assuntos diferentes.</p><pre><code>&lt;hr&gt;</code></pre></article>
+                <article class="tag"><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code><h3>Listas</h3><p><code>&lt;ul&gt;</code> cria lista sem ordem e <code>&lt;ol&gt;</code> cria lista numerada; ambas usam <code>&lt;li&gt;</code>.</p><pre><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></pre></article>
+            </div>
+        </section>
+
+        <section id="links" class="secao" aria-labelledby="titulo-links">
+            <div class="titulo-secao"><p>03</p><h2 id="titulo-links">Links e imagens</h2></div>
+            <div class="grade-tags">
+                <article class="tag"><code>&lt;a&gt;</code><h3>Link</h3><p>Cria um caminho para outra página, parte da página, arquivo ou site.</p><pre><code>&lt;a href="contato.html"&gt;Contato&lt;/a&gt;</code></pre></article>
+                <article class="tag"><code>&lt;img&gt;</code><h3>Imagem</h3><p>Exibe uma imagem. O atributo <code>alt</code> descreve a imagem para acessibilidade.</p><pre><code>&lt;img src="foto.jpg" alt="Paisagem"&gt;</code></pre></article>
+            </div>
+        </section>
+
+        <section id="formularios" class="secao" aria-labelledby="titulo-formularios">
+            <div class="titulo-secao"><p>04</p><h2 id="titulo-formularios">Formulários</h2></div>
+            <div class="grade-tags">
+                <article class="tag"><code>&lt;form&gt;</code><h3>Formulário</h3><p>Agrupa campos que enviam dados para um destino.</p><pre><code>&lt;form action="/enviar"&gt;...&lt;/form&gt;</code></pre></article>
+                <article class="tag"><code>&lt;label&gt;</code><h3>Rótulo de campo</h3><p>Explica o que deve ser preenchido e melhora a acessibilidade.</p><pre><code>&lt;label for="nome"&gt;Nome&lt;/label&gt;</code></pre></article>
+                <article class="tag"><code>&lt;input&gt;</code><h3>Campo de entrada</h3><p>Recebe dados. O tipo muda seu comportamento: texto, e-mail, senha e mais.</p><pre><code>&lt;input id="nome" type="text"&gt;</code></pre></article>
+                <article class="tag"><code>&lt;textarea&gt;</code><h3>Texto longo</h3><p>Cria uma área para mensagens e descrições maiores.</p><pre><code>&lt;textarea&gt;&lt;/textarea&gt;</code></pre></article>
+                <article class="tag"><code>&lt;select&gt;</code><h3>Seleção</h3><p>Apresenta opções escolhidas com <code>&lt;option&gt;</code>.</p><pre><code>&lt;select&gt;&lt;option&gt;Brasil&lt;/option&gt;&lt;/select&gt;</code></pre></article>
+                <article class="tag"><code>&lt;button&gt;</code><h3>Botão</h3><p>Aciona uma ação. Em formulários, defina o atributo <code>type</code>.</p><pre><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code></pre></article>
+            </div>
+        </section>
+
+        <section id="tabelas" class="secao" aria-labelledby="titulo-tabelas">
+            <div class="titulo-secao"><p>05</p><h2 id="titulo-tabelas">Tabelas</h2></div>
+            <div class="grade-tags">
+                <article class="tag"><code>&lt;table&gt;</code><h3>Tabela</h3><p>Organiza dados que possuem relação entre linhas e colunas.</p><pre><code>&lt;table&gt;...&lt;/table&gt;</code></pre></article>
+                <article class="tag"><code>&lt;tr&gt;</code><h3>Linha</h3><p>Cria uma linha dentro da tabela.</p><pre><code>&lt;tr&gt;...&lt;/tr&gt;</code></pre></article>
+                <article class="tag"><code>&lt;th&gt;</code><h3>Cabeçalho</h3><p>Define o título de uma coluna ou linha.</p><pre><code>&lt;th&gt;Produto&lt;/th&gt;</code></pre></article>
+                <article class="tag"><code>&lt;td&gt;</code><h3>Célula de dado</h3><p>Inclui o valor comum em uma tabela.</p><pre><code>&lt;td&gt;Notebook&lt;/td&gt;</code></pre></article>
+            </div>
+        </section>
+    </main>
+    <footer>Feito para consulta durante os estudos de HTML.</footer>
+</body>
+</html>

@@ -1,136 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lista de tarefas pessoais">
     <link rel="stylesheet" href="style.css">
-    <title>Minhas atividades</title>
+    <title>Minhas tarefas</title>
 </head>
 <body>
-    <header>
-        <div class="menu">
-            <a href="./index.html">Home</a>
-            <a href="./account.html">Minha conta</a>
-        </div>
-        <div class="profile">
-            <p class="user-name">Gideão Ferreira</p>
-            <p class="email">gideaoferreira@hotmail.com</p>
+    <header class="topo">
+        <a class="marca" href="index.html">Minhas tarefas</a>
+        <nav aria-label="Navegação principal">
+            <a class="ativo" href="index.html">Minhas tarefas</a>
+            <a href="#perfil">Minha conta</a>
+        </nav>
+        <div class="perfil" id="perfil">
+            <div class="avatar" aria-hidden="true">MY</div>
+            <div>
+                <p class="nome-usuario">Maria Yasmim</p>
+                <p class="email">maria.yasmim@email.com</p>
+            </div>
         </div>
     </header>
-    <main>
-        <h2> Minhas atividades </h2>
-        <form>
-            <div class="task">
-                <input type="text" name="task" placeholder="Ex: Marcar reunião com time">
-                <button> Adicionar </button>
+
+    <main class="conteudo">
+        <section class="apresentacao" aria-labelledby="titulo-principal">
+            <p class="eyebrow">ORGANIZAÇÃO PESSOAL</p>
+            <h1 id="titulo-principal">Minhas tarefas</h1>
+            <p>Planeje seu dia e acompanhe o que precisa ser feito.</p>
+        </section>
+
+        <section class="painel" aria-label="Lista de tarefas">
+            <form class="nova-tarefa">
+                <label class="sr-only" for="tarefa">Nova tarefa</label>
+                <input id="tarefa" name="tarefa" type="text" placeholder="O que você precisa fazer?">
+                <button type="submit">Adicionar tarefa <span aria-hidden="true">+</span></button>
+            </form>
+
+            <div class="resumo">
+                <h2>Tarefas de hoje</h2>
+                <span>4 pendentes</span>
             </div>
-        </form>
-        <div class="tasks">
-            <div class="task-item">
-                <div class="content">
-                    <p>Reunião com CTO/CFO</p>
-                </div>
-                <div class="actions">
-                    <button class="check">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                            viewBox="0 0 21 21"><!-- Icon from System UIcons by Corey Ginnivan - https://github.com/CoreyGinnivan/system-uicons/blob/master/LICENSE -->
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                d="m5.5 11.5l3 3l8.028-8" />
-                        </svg>
-                    </button>
-                    <button class="delete">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                            viewBox="0 0 21 21">
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                d="m15.5 15.5l-10-10zm0-10l-10 10" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="task-item">
-                <div class="content">
-                    <p>Reunião com CTO/CFO</p>
-                </div>
-                <div class="actions">
-                    <button class="check">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                            viewBox="0 0 21 21">
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                d="m5.5 11.5l3 3l8.028-8" />
-                        </svg>
-                    </button>
-                    <button class="delete">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                            viewBox="0 0 21 21"><!-- Icon from System UIcons by Corey Ginnivan - https://github.com/CoreyGinnivan/system-uicons/blob/master/LICENSE -->
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                d="m15.5 15.5l-10-10zm0-10l-10 10" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="task-item">
-                <div class="content">
-                    <p>Reunião com CTO/CFO</p>
-                </div>
-                <div class="actions">
-                    <button class="check">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                            viewBox="0 0 21 21"><!-- Icon from System UIcons by Corey Ginnivan - https://github.com/CoreyGinnivan/system-uicons/blob/master/LICENSE -->
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                d="m5.5 11.5l3 3l8.028-8" />
-                        </svg>
-                    </button>
-                    <button class="delete">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                            viewBox="0 0 21 21"><!-- Icon from System UIcons by Corey Ginnivan - https://github.com/CoreyGinnivan/system-uicons/blob/master/LICENSE -->
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                d="m15.5 15.5l-10-10zm0-10l-10 10" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="task-item">
-                <div class="content">
-                    <p>Reunião com CTO/CFO</p>
-                </div>
-                <div class="actions">
-                    <button class="check">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                            viewBox="0 0 21 21"><!-- Icon from System UIcons by Corey Ginnivan - https://github.com/CoreyGinnivan/system-uicons/blob/master/LICENSE -->
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                d="m5.5 11.5l3 3l8.028-8" />
-                        </svg>
-                    </button>
-                    <button class="delete">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                            viewBox="0 0 21 21"><!-- Icon from System UIcons by Corey Ginnivan - https://github.com/CoreyGinnivan/system-uicons/blob/master/LICENSE -->
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                d="m15.5 15.5l-10-10zm0-10l-10 10" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="task-item">
-                <div class="content">
-                    <p>Reunião com CTO/CFO</p>
-                </div>
-                <div class="actions">
-                    <button class="check">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                            viewBox="0 0 21 21"><!-- Icon from System UIcons by Corey Ginnivan - https://github.com/CoreyGinnivan/system-uicons/blob/master/LICENSE -->
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m5.5 11.5l3 3l8.028-8" />
-                        </svg>
-                    </button>
-                    <button class="delete">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
-                            viewBox="0 0 21 21"><!-- Icon from System UIcons by Corey Ginnivan - https://github.com/CoreyGinnivan/system-uicons/blob/master/LICENSE -->
-                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                d="m15.5 15.5l-10-10zm0-10l-10 10" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
+
+            <ul class="lista-tarefas">
+                <li class="item-tarefa">
+                    <label><input type="checkbox"><span class="caixa-check" aria-hidden="true"></span><span>Assistir aulas de Ruby</span></label>
+                    <button class="remover" type="button" aria-label="Remover Assistir aulas de Ruby">×</button>
+                </li>
+                <li class="item-tarefa">
+                    <label><input type="checkbox"><span class="caixa-check" aria-hidden="true"></span><span>Revisar prioridades da semana</span></label>
+                    <button class="remover" type="button" aria-label="Remover Revisar prioridades da semana">×</button>
+                </li>
+                <li class="item-tarefa">
+                    <label><input type="checkbox"><span class="caixa-check" aria-hidden="true"></span><span>Criar um novo projeto</span></label>
+                    <button class="remover" type="button" aria-label="Remover Criar um novo projeto">×</button>
+                </li>
+                <li class="item-tarefa concluida">
+                    <label><input type="checkbox" checked><span class="caixa-check" aria-hidden="true"></span><span>Me candidatar a vagas</span></label>
+                    <button class="remover" type="button" aria-label="Remover Me candidatar a vagas">×</button>
+                </li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>
